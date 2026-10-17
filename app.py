@@ -55,7 +55,7 @@ yearly["이동평균5년"] = yearly["연평균기온"].rolling(window=5, min_per
 # 3) 사이드바: 연도 범위 슬라이더 ---------------------------------
 min_year, max_year = int(yearly["연도"].min()), int(yearly["연도"].max())
 year_range = st.sidebar.slider(
-    "연도 범위 선택",
+    "통계 계산의 연도 범위 선택",
     min_value=min_year,
     max_value=max_year,
     value=(min_year, max_year),
@@ -78,7 +78,7 @@ if len(sel_daily) > 0:
         st.metric("최고기온(평균)", f"{stat_max:.2f} ℃")
     with c3:
         st.metric("최저기온(평균)", f"{stat_min:.2f} ℃")
-    st.caption(f"선택 구간 관측 수: {len(sel_daily)}일 / 연평균 기준 {len(sel_yearly)}개 연도")
+    st.caption(f"선택 구간 관측 수: {len(sel_daily)}일 / {len(sel_yearly)}개 연도")
 else:
     st.subheader("선택 구간 기온 통계")
     st.info("선택한 연도 범위에 데이터가 없습니다.")
