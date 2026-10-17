@@ -117,7 +117,7 @@ fig.update_layout(
     margin=dict(l=40, r=20, t=50, b=30),
     font=dict(family="Malgun Gothic, AppleGothic, NanumGothic, sans-serif"),
 )
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # 6) 하단 안내(결측치 제외 명시) -----------------------------------
 st.divider()
