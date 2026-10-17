@@ -59,7 +59,6 @@ year_range = st.sidebar.slider(
     min_value=min_year,
     max_value=max_year,
     value=(min_year, max_year),
-    format="%Y",
 )
 st.sidebar.caption(f"전체 기간: {min_year}년 ~ {max_year}년 (총 {len(yearly)}개 연도)")
 
