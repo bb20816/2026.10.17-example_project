@@ -91,10 +91,9 @@ fig.add_trace(
     go.Scatter(
         x=yearly["연도"],
         y=yearly["연평균기온"],
-        mode="lines+markers",
+        mode="lines",
         name="연평균기온",
         line=dict(color="#2E86AB", width=2),
-        marker=dict(size=4),
     )
 )
 
